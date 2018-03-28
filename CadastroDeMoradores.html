@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Cadastro de Moradores</title>
+	<style type="text/css">
+	
+	form {
+		font-family: Tahoma,Geneva,sans-serif;
+		font-size: 16px;
+		background-color: #CCEEFF;
+		max-width: 1235px;
+	}
+	h1 {
+		margin-bottom: 30px;
+		margin-left: 30px;
+		color: #000000;
+		
+	}	
+	.submit input {
+		background-color: #7FFFD4;
+		height: 20px;
+		width: 80px;
+		font-weight: bold;
+		-webkit-border-radius: 7px;
+		
+		border: 2px solid;
+		color: black;
+	}
+	form label {
+		margin-left: 15px;
+		color: #000080;
+		font-weight: bold;
+	}
+	.type input{
+		margin-left: 15px;
+		color: #000030;
+		font-weight: bold;	
+	}
+</style>
+
+<script type="text/javascript">
+	function Enviar() {
+		var nome = document.getElementById("nomeid");
+		if (nome.value != "") {
+			alert('Obrigado!) ' + nome.value + ' Os seus dados foram cadastrados!');
+		}
+	}
+</script>
+
+</head>
+
+<body>
+	<form name="formulario" method="post">
+		<h1><center>Cadastro de Moradores</center></h1>
+			<h4>Tipo de Morador:</h4>
+				<label class="btn-proprietario" style="color: #000080">
+					<input type="radio" name="Morador" id="proprietario" value="1" checked />Proprietário </label>
+				<label class="btn-inquilino" style="color: #000080">
+						<input type="radio" name="Morador" id="inquilino" value="2" checked />Inquilino </label>
+							<label>&nbsp;&nbsp;&nbsp;Apto.:</label>
+						<input type="text" name="apt_numero" id="apt" placeholder="Número" size="10">
+					<label>Bloco:</label>
+				<input type="text" name="bloco" id="bloco" size="10"></p>	
+			<p class="Nome">
+				<label>Nome:</label>
+					<input type="text" name="nome" id="nomeid" size="60" /></p>
+			<p class="RG">
+				<label>RG:</label>
+					<input type="number" name="rg" id="rg_id" /></p>
+			<P class="CPF">
+				<label>CPF:</label>
+					<input type="number" name="cpf" id="cpf_id" /></p>
+			<p class="telefone"> 
+				<label class>Telefones:</label>
+				<label>Residencial:</label>
+					<input type="number" name="foneResidencial" id="tel_res_id" > 
+						<label>Comercial:</label>
+							<input type="number" name="comercial" id="tel_com_id">
+								<label>Celular:</label>
+									<input type="number" name="celular" id="tel_cel_id"  /></p>
+			<p class="email">
+				<label>E-mail:</label>
+					<input type="email" name="email" id="email"  size="60" /></p><br>
+						<label>Indique uma pessoa, com telefone, para contato imediato em caso de emergência:</label>
+			<p class="nome">
+				<label>Nome:</label>
+					<input type="text" name="nome" id="nome_emergencia" size="60" >
+						<label>Tel.:</label>
+							<input type="number" name="tel" id="num_emergencia" placeholder="Fixo/Celular" /></p>
+						<p><label><h4>Moradores:</h4></label></p>
+			<p class="moradores">
+				<p><label>1. </label>
+					<input type="text" name="nome_morador1" id="nome_morador1" placeholder="Morador 1" size="65" />
+						<label>Grau de Parentesco:</label>
+							<input type="text" name="parentesco" id="parentesco1" size="30" />
+						<label>Idade:</label>
+					<input type="text" name="idade" id="idade1" size="4" ></p>
+				<p><label>2. </label>
+					<input type="text" name="nome_morador2" id="nome_morador2" placeholder="Morador 2" size="65" />
+						<label>Grau de Parentesco:</label>
+							<input type="text" name="parentesco" id="parentesco2" size="30" />
+						<label>Idade:</label>
+					<input type="text" name="idade" id="idade2" size="4" ></p>
+				<p><label>3. </label>
+					<input type="text" name="nome_morador3" id="nome_morador3" placeholder="Morador 3" size="65" />
+						<label>Grau de Parentesco:</label>
+							<input type="text" name="parentesco" id="parentesco3" size="30" />
+						<label>Idade:</label>
+					<input type="text" name="idade" id="idade3"  size="4" ></p>
+				<p><label>4. </label>
+					<input type="text" name="nome_morador4" id="nome_morador4" placeholder="Morador 4" size="65" />
+						<label>Grau de Parentesco:</label>
+								<input type="text" name="parentesco" id="parentesco4" size="30" />
+							<label>Idade:</label>
+					<input type="text" name="idade" id="idade4" size="4" ></p>
+				<p><label>5. </label>
+					<input type="text" name="nome_morador5" id="nome_morador5" placeholder="Morador 5" size="65" />
+						<label>Grau de Parentesco:</label>
+							<input type="text" name="parentesco" id="parentesco5" size="30" />
+						<label>Idade:</label>
+					<input type="text" name="idade" id="idade5" size="4" ></p> </p>
+				<p><label><h4>Empregada (Doméstica da Casa):</h4></label></p>
+			<p class="empregado(s)">
+				<p><label>Nome:</label>
+					<input type="text" name="nome_empregado(s)" id="nome_empregado(s)"  size="70" />
+						<label>Telefone:</label>
+						<input type="text" name="tel_empregado(s)" id="tel_empregado(s)" ></p>
+					<p><label>Endereço:</label>
+				<input type="text" name="end_empregado(s)" id="end_empregado(s)" size="65"></p> </p>
+			<p class="veiculos">
+				<p><label><h4>Veículos:</h4></label></p>
+					<p><label>Marca/Modelo 1:</label>
+						<input type="text" name="veiculo_marca1" id="veiculos1"  size="40">
+							<label>Placa:</label>
+								<input type="text" name="veiculo_placa1" id="veiculos1" >
+							<label>Vaga:</label>
+						<input type="text" name="veiculo_vaga1" id="veiculos1" ></p>
+					<p><label>Marca/Modelo 2:</label>
+						<input type="text" name="veiculo_marca2" id="veiculos2"  size="40">
+							<label>Placa:</label>
+								<input type="text" name="veiculo_placa2" id="veiculos2">
+							<label>Vaga:</label>
+						<input type="text" name="veiculo_vaga2" id="veiculos2" ></p>
+					<p><label>Marca/Modelo 3:</label>
+						<input type="text" name="veiculo_marca3" id="veiculos3"  size="40">
+							<label>Placa:</label>
+								<input type="text" name="veiculo_placa3" id="veiculos3" >
+							<label>Vaga:</label>
+						<input type="text" name="veiculo_vaga3" id="veiculos3" ></p>
+			<p class="inquilino">		
+				<p><label><h4>Caso seja Inquilino:</h4></label></p>
+					<p><label>Nome do Proprietário:</label>
+						<input type="text" name="nome_inquilino" id="nome_inquilino"  size="60" />
+							<label>RG n°:</label>
+								<input type="text" name="rg_inquilino" id="rg_inquilino" >
+							<label>CPF n°:</label>
+								<input type="text" name="cpf_inquilino" id="cpf_inquilino" ></p>
+							<p><label>Endereço:</label>
+									<input type="text" name="end_inquilino" id="end_inquilino"  size="60">
+								<label>Cidade:</label>
+									<input type="text" name="cidade" id="cidade_inquilino" size="30">
+								<label>Estado:</label>
+									<input type="text" name="estado" id="estado_inquilino"  size="20"></p>
+							<p><label>Telefones:</label>
+								<label>Residencial:</label>
+									<input type="text" name="tel_residencial" id="tel_res_inquilino" >
+										<label>Comercial:</label>
+											<input type="text" name="tel_comercial" id="tel_com_inquilino" >
+										<label>Celular:</label>
+											<input type="text" name="tel_celular" id="tel_cel_inquilino" ></p>
+							<p><label>E-mail:</label>
+								<input type="text" name="e-mail" id="email_inquilino"  size="60"></p>
+				<p class="administrador_loc">	
+					<p><label>Administrador da Locação:</label>
+						<input type="text" name="nome_admin_loc" id="nome_admin_loc"  size="60"></p>
+							<p><label>Endereço:</label>
+								<input type="text" name="nome_admin_loc" id="end_admin_loc" size="60"></p>
+									<p><label>Cidade:</label>
+											<input type="text" name="cidade_admin" id="cidade_admin"  size="30">
+										<label>Estado:</label>
+												<input type="text" name="estado_admin" id="estado_admin"  size="20"></p>
+									<p><label>E-mail:</label>
+											<input type="text" name="e-mail_admin" id="e-mail_admin"  size="60"></p>
+				<p class="submit">
+					<input type="submit" onclick="Cadastrar()"; value="Cadastrar" text-align: center>
+
+</form>
+</body>
+</html>
